@@ -4,3 +4,8 @@ gunicorn
 sklearn
 joblib
 pandas
+BeautifulSoup
+requests
+lxml
+re
+json
