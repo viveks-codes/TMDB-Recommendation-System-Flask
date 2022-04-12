@@ -14,20 +14,6 @@ vector = cv.fit_transform(df['tags']).toarray()
 
 
 similarity = cosine_similarity(vector)
-counter = 0
-
-for i in movienames:
-    # print(len(movienames) - counter )
-    # bd.download(i+" Movie", limit=1, output_dir='static/photos', timeout=10, verbose=False)
-    # counter+=1
-    #if file exist skip else download 
-    if os.path.isfile('static/photos/'+i+' Movie.jpg'):
-        counter+=1
-        print('file exist, {}'.format(counter))
-    else:
-        bd.download(i+" Movie", limit=1, output_dir='static/photos', timeout=10, verbose=False)
-        counter+=1
-        print('file downloaded, {}'.format(counter))
     
 def rec(movie,n):
     r = []
