@@ -41,12 +41,12 @@
 
     <h3>Here are top #{{n}} Recommendations for Movie {{movie}}</h3>
 
-    {% for table in suggestions %}
+    {% for table,sugess in linkssuggestionzip %}
     <form class="container" method="POST" action="/recommend">
 
       <button class="btn btn-primary container" type="submit" value="{{table}}">
 
-        <img class="img container" src="{{ url_for('static', filename='photos/'+table+' Movie/Image_1.jpg') }}"
+        <img class="img container" src="{{sugess}}"
           alt="Card image cap">
 
         <div class="card-body">
