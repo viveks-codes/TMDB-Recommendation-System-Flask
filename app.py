@@ -3,8 +3,7 @@ from flask import Flask, flash, redirect, render_template, \
 import pandas as pd 
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-import os
-from bing_image_downloader import downloader as bd
+
 
 cv = CountVectorizer(max_features=8000,stop_words='english')
 
