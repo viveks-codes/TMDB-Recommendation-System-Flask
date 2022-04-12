@@ -3,6 +3,8 @@ from flask import Flask, flash, redirect, render_template, \
 import pandas as pd 
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+import os
+from bing_image_downloader import downloader as bd
 
 cv = CountVectorizer(max_features=8000,stop_words='english')
 
@@ -12,7 +14,21 @@ vector = cv.fit_transform(df['tags']).toarray()
 
 
 similarity = cosine_similarity(vector)
+counter = 0
 
+for i in movienames:
+    # print(len(movienames) - counter )
+    # bd.download(i+" Movie", limit=1, output_dir='static/photos', timeout=10, verbose=False)
+    # counter+=1
+    #if file exist skip else download 
+    if os.path.isfile('static/photos/'+i+' Movie.jpg'):
+        counter+=1
+        print('file exist, {}'.format(counter))
+    else:
+        bd.download(i+" Movie", limit=1, output_dir='static/photos', timeout=10, verbose=False)
+        counter+=1
+        print('file downloaded, {}'.format(counter))
+    
 def rec(movie,n):
     r = []
     index = df[df['title'] == movie].index[0]
@@ -20,16 +36,20 @@ def rec(movie,n):
     for i in distances[1:int(n)+1]:
         r.append(df.iloc[i[0]].title)
     return r
+    
 app = Flask(__name__)
 @app.route('/')
+
 def index():
-    return render_template('index.html')
-@app.route('/recommend',methods=['POST'])
+    return render_template('index.html',df=df['title'])
+
+@app.route('/recommend',methods=['GET','POST'])
 def recommend():
     movie = request.form['movie']
     n = request.form['n']
-    print(rec(movie,n))
+    # print(rec(movie,n))
     suggestions = rec(movie,int(n))
-    return render_template('index.html',suggestions=suggestions)
+    return render_template('index.html',suggestions=suggestions,df=df['title'])
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
