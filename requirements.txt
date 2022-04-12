@@ -1,0 +1,7 @@
+Flask==1.1.2
+Flask-Cors==3.0.10
+gunicorn
+sklearn
+joblib
+pandas
+bing_image_downloader
