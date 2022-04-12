@@ -1,0 +1,21 @@
+
+<p>
+	Hello, world!
+</p>
+<body>
+    <h1>Enter Movie name for Recommend</h1>
+   <form method="POST" action = "/recommend">
+     <div class = "form-group">
+       <input type="text" name = "movie">
+       <input type="text" name = "n">
+     </div>
+     <input class="btn btn-primary" type="submit" value="submit">
+   </form>
+   {% for table in suggestions %}
+   <br>
+   {{ table }}
+   <br>
+{% endfor %}
+<br>
+
+ </body>
