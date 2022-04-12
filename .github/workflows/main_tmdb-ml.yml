@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'TMDB-ML'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0C9E1D30DD744057B55246EDF907E437 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_63395408733743328A986B5BC30502C3 }}
