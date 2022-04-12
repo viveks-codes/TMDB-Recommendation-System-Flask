@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 # import os
-import requests, lxml, 
+import requests, lxml
 from bs4 import BeautifulSoup
 
 cv = CountVectorizer(max_features=8000,stop_words='english')
