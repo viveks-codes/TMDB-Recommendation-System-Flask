@@ -34,7 +34,7 @@ def recommend():
     n = request.form['n']
     # print(rec(movie,n))
     suggestions = rec(movie,int(n))
-    return render_template('index.html',suggestions=suggestions,df=df['title'])
+    return render_template('index.html',suggestions=suggestions,df=df['title'],movie=movie,n=n)
 
 if __name__ == '__main__':
     app.run(debug=False)
