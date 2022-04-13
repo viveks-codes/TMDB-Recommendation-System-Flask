@@ -85,4 +85,4 @@ def recommend():
     return render_template('index.html',df=df['title'],linkssuggestionzip=zip(suggestions,links),n=n,movie=movie,overview=overview,suggestions=suggestions,links=links,key=key,crew=crew,budget=budget,homepage=homepage,release_date=release_date,genres=genres)
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run()
