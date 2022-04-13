@@ -1,5 +1,4 @@
 <html lang="en">
-
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -13,6 +12,9 @@
 </head>
 
 <body>
+  <br>
+  <br>
+
   <h1 class="container">Select Movie name for Recommend</h1>
   <form class="container" method="POST" action="/recommend">
     <div class="container">
@@ -35,36 +37,67 @@
 
 
 
+  <form class="container" method="POST" action="/recommend">
 
-
+    <button class="btn btn-primary container" type="submit" value="{{links[0]}}">
   <div class="container">
+      <img class="rounded" src="{{links[0]}}" alt="Card image cap">
+  
+<br>
+        <h4>Overview of {{movie}}: </h4>
+        <h5>{{overview}}</h5>
+        <br>
+        <h4>Genre: </h4>
+        <h5>{{genres}}</h5>
+        <br>
+        <h4>Director of {{movie}}: </h4>
+        <h5>{{director}}</h5>
+        <br>
+        <h4>budget: </h4>
+        <h5>{{budget}}</h5>
+        <br>
+        <h4>Homepage of {{movie}}: </h4>
+        <h5>{{homepage}}</h5>
+        <br>
+        <h4>Release date of {{movie}}: </h4>
+        <h5>{{release_date}}</h5>
+        <br>
+        <h4>Genres of {{movie}}: </h4>
+        <h5>{{genres}}</h5>
+        <br>
+        <h4>Director of {{movie}}: </h4>
+        <h5>{{crew}}</h5>
+        <br>
+          <!-- key=key,crew=crew,budget=budget,homepage=homepage,release_date=release_date,genres=genres -->
 
-    <h3>Here are top #{{n}} Recommendations for Movie {{movie}}</h3>
-
-    {% for table,sugess in linkssuggestionzip %}
-    <form class="container" method="POST" action="/recommend">
-
-      <button class="btn btn-primary container" type="submit" value="{{table}}">
-
-        <img class="img container" src="{{sugess}}"
-          alt="Card image cap">
-
-        <div class="card-body">
-          <h5 class="card-title">{{table}}</h5>
-          <input type="hidden" type="text" placeholder="5" value="5" name="n">
-          <select style ="display: none;" name="movie">
-            <option style ="display: none;" value="{{table}}"></option>
-          </select>
-
-        </div>
-
-  </div>
-  </button>
+          
+          
+      </div>
+    </button>
+  
   </form>
-  {% endfor %}
+<div class="container">
+  <h1>Here are top #{{n}} Recommendations for Movie </h1>
   <br>
-  </div>
+  {% for table,sugess in linkssuggestionzip %}
+  <form class="container" method="POST" action="/recommend">
+
+    <button class="btn btn-primary container" type="submit" value="{{table}}">
+
+      <img class="img container" src="{{sugess}}" alt="Card image cap">
+
+      <div class="card-body">
+        <h5 class="card-title">{{table}}</h5>
+        <input type="hidden" type="text" placeholder="5" value="5" name="n">
+        <select style="display: none;" name="movie">
+          <option style="display: none;" value="{{table}}"></option>
+        </select>
+
+      </div>
+
+</button>
+</form>
+{% endfor %}
 
 </body>
-
 </html>
