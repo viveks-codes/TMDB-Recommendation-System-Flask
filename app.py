@@ -87,4 +87,4 @@ def fwdtolink():
     link = request.form['movielink']
     return redirect(link)
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
