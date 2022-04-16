@@ -41,13 +41,12 @@ def rec(movie,n):
 #id	genres	keywords	title	overview	crew	budget	homepage	release_date
 def get_details(movie):
     index = df[df['title'] == movie].index[0]
-    key = df.iloc[index]['keywords']
     crew = df.iloc[index]['crew']
     budget = df.iloc[index]['budget']
     homepage = df.iloc[index]['homepage']
     release_date = df.iloc[index]['release_date']
     genres = df.iloc[index]['genres']
-    return key,crew,budget,homepage,release_date,genres
+    return crew,budget,homepage,release_date,genres
 def google_image_search_link(keyword):
     l = []
     for i in keyword:
@@ -69,7 +68,7 @@ app = Flask(__name__)
 @app.route('/')
 
 def index():
-    return render_template('b.html',df=df['title'],links=google_image_search_link(['Avatar']),suggestions=rec(df['title'][0],5))
+    return render_template('base.html',df=df['title'],links=google_image_search_link(['Avatar']),suggestions=rec(df['title'][0],5))
 
 @app.route('/recommend',methods=['GET','POST'])
 def recommend():
@@ -80,9 +79,12 @@ def recommend():
     links = google_image_search_link(suggestions)
     overview = df[df['title'] == movie]['overview'].values[0]
     #print(links)
-    key,crew,budget,homepage,release_date,genres = get_details(movie)
+    crew,budget,homepage,release_date,genres = get_details(movie)
     #get image links of suggestions from google image search 
-    return render_template('index.html',df=df['title'],linkssuggestionzip=zip(suggestions,links),n=n,movie=movie,overview=overview,suggestions=suggestions,links=links,key=key,crew=crew,budget=budget,homepage=homepage,release_date=release_date,genres=genres)
-
+    return render_template('index.html',df=df['title'],linkssuggestionzip=zip(suggestions,links),n=n,movie=movie,overview=overview,suggestions=suggestions,links=links,crew=crew,budget=budget,homepage=homepage,release_date=release_date,genres=genres)
+@app.route('/fwdtolink',methods=['GET','POST'])
+def fwdtolink():
+    link = request.form['movielink']
+    return redirect(link)
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

@@ -1,0 +1,183 @@
+body{ background-color: #202324;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;}
+
+  body{ background-color: #202324;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    color: orange;
+    font-family: "Arial", "Helvetica", sans-sarif!important;}
+  h5 {
+      overflow: hidden;
+    }
+  h5 {
+      word-wrap: break-word;
+    }
+.github {
+      position: fixed;
+      top: 0;
+      right: 0;
+      background: none; }
+      .github img {
+        border: none;
+        border-radius: 0;
+        width: 100px; }
+        .github img {
+          border: none;
+          border-radius: 0;
+          width: 100px; }
+.btn {align-items: center;
+    justify-content: center;
+    user-select: none;
+
+    color: 		#1b1b1b;
+    background-color: 	#ffa31a;
+    }
+    
+button:hover {
+      background-color: yellow;
+    }
+
+.btn {
+      background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+      box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+  }
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.buttons {
+    margin: 10%;
+    text-align: center;
+}
+
+.btn-hover {
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+.github {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: none; }
+    .github img {
+      border: none;
+      border-radius: 0;
+      width: 100px; }
+.btn {align-items: center;
+        justify-content: center;
+        user-select: none;}
+
+body{ background-color: #202324;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    color: orange;
+    font-family: "Arial", "Helvetica", sans-sarif!important;}
+  h5 {
+      overflow: hidden;
+    }
+  h5 {
+      word-wrap: break-word;
+    }
+.github {
+      position: fixed;
+      top: 0;
+      right: 0;
+      background: none; }
+      .github img {
+        border: none;
+        border-radius: 0;
+        width: 100px; }
+        .github img {
+          border: none;
+          border-radius: 0;
+          width: 100px; }
+.btn {align-items: center;
+    justify-content: center;
+    user-select: none;
+
+    color: 		#1b1b1b;
+    background-color: 	#ffa31a;
+    }
+    
+button:hover {
+      background-color: yellow;
+    }
+
+.btn {
+      background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+      box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+  }
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.buttons {
+    margin: 10%;
+    text-align: center;
+}
+
+.btn-hover {
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
