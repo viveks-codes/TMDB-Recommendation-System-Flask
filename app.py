@@ -16,7 +16,7 @@ vector = cv.fit_transform(tags['tags']).toarray()
 
 similarity = cosine_similarity(vector)
 counter = 0
-
+#
 # for i in movienames:
 #     # print(len(movienstaticames) - counter )
 #     # bd.download(i+" Movie", limit=1, output_dir='static/photos', timeout=10, verbose=False)
