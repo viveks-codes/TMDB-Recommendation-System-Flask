@@ -10,7 +10,7 @@
 
 ## Author
 
-👤 **Vivek Patel, Niken Goswami, Hunaid Nakhuda**
+👤 **Vivek Patel**
 
 * LinkedIn: [@Vivek Patel](https://linkedin.com/in/vivek-patel-0553731a5)
 
